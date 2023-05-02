@@ -3,13 +3,19 @@
   --white: #fff;
   --primary-red: rgb(204, 21, 64);
   --primary-dark: rgb(34, 37, 41);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 body {
-  font-family: "Roboto Condensed" sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 /***** PORTFOLIO *****/
 
 /* Navbar style */
+
+nav {
+  z-index: 2;
+}
 
 .logo {
   width: 16.25rem;
@@ -43,6 +49,12 @@ nav ul li {
   height: 6rem !important;
 }
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 7rem;
+  }
+}
+
 .navbar-nav > li > a.active,
 .navbar-nav > li a:focus {
   border-top: 0.1875rem solid var(--primary-red);
@@ -52,4 +64,80 @@ nav ul li {
 .navbar-nav > li a:hover {
   border-top: 0.1875rem solid var(--primary-red);
   color: var(--white);
+}
+
+/* Header style */
+
+.header-wrapper {
+  position: relative;
+  background: url(../public/assets/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  z-index: 1;
+}
+
+.main-info h1 {
+  color: var(--primary-red);
+  text-transform: uppercase;
+}
+
+/* Typed text */
+.typed-text {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.5rem !important;
+  }
+  .typed-text {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Header */
+.btn-main-offer {
+  border: 0.0625rem solid var(--primary-red);
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  margin: 2rem;
+  text-decoration: none;
+}
+
+.btn-main-offer:hover {
+  background-color: var(--primary-hover-red);
+  color: var(--white);
+  transition: 0.2s ease-in-out;
+}
+
+/* Particles js */
+#tsparticles {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
 }
