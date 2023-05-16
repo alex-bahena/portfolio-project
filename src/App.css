@@ -253,8 +253,17 @@ nav ul li {
   border-radius: 15px;
   width: 100%;
   height: auto;
+  transition: 2s;
   cursor: pointer;
 }
+
+.portfolio-card img:hover {
+  width: 105%;
+  transition: 0.5s;
+  margin-right: 30%;
+}
+
+/* _____________________OVERFLOW____________________ */
 
 .portfolio-content {
   border: solid #000000;
@@ -267,7 +276,7 @@ nav ul li {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .card-title,
@@ -282,40 +291,6 @@ nav ul li {
 }
 .portfolio-card:hover .portfolio-content {
   left: 0;
-}
-
-/* _____________________OVERFLOW____________________ */
-
-.overflow {
-  position: absolute;
-  opacity: 0;
-  background: var(--primary-black);
-  width: 25rem;
-  height: 12rem;
-  top: 0;
-  border: 0.0625rem solid var(--primary-green);
-  cursor: pointer;
-  z-index: 0;
-}
-
-.portfolio-image-box:hover .overflow {
-  opacity: 60%;
-  transition: 0.3s ease-in-out;
-}
-
-.portfolio-icon {
-  position: absolute;
-  opacity: 0;
-  margin-left: -13rem;
-  margin-top: 5.6rem;
-  color: var(--primary-green);
-  font-size: 1.5rem;
-}
-
-.portfolio-image-box:hover .portfolio-icon {
-  opacity: 70%;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 /* _____________________Popup box____________________ */
