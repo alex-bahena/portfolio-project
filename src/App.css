@@ -237,27 +237,51 @@ nav ul li {
 
 .portfolio-wrapper {
   position: relative;
-  background: var(--primary-light-grey);
-  padding: 3rem 0;
   z-index: 2;
 }
 
-.portfolio-wrapper h1 {
-  color: var(--primary-black);
-}
-img {
-  max-width: 100%;
-}
-.portfolio-image {
-  width: 100%;
-  border: 0.0625rem solid var(--primary-green);
-  padding: 0 0.5rem;
+.portfolio-card {
+  height: auto;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
 }
 
-.portfolio-image-box {
-  position: relative;
-  margin: 1rem;
-  max-width: 30%;
+.portfolio-card img {
+  border: 0.0625rem solid #eee;
+  box-shadow: 0px 5px 14px #ddd;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.portfolio-content {
+  border: solid #000000;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  padding: 2px;
+  top: 0;
+  left: -105%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.card-title,
+.portfolio-description {
+  color: #fff;
+}
+
+.portfolio-content .read-more {
+  font-weight: bolder;
+  cursor: pointer;
+  color: var(--primary-green);
+}
+.portfolio-card:hover .portfolio-content {
+  left: 0;
 }
 
 /* _____________________OVERFLOW____________________ */

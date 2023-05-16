@@ -19,18 +19,43 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-wrapper">
-      <div className="container">
-        <div className="row g-3">
-          <div className="col-12 col-md-6 col-lg-4">
+      <div className="container overflow-hidden">
+        <h1 className="text-uppercase text-center py-5">portfolio</h1>
+        <div className="row g-3 m-2">
+          {/* - */}
+          <div className=" col-12 col-md-6 col-lg-4 portfolio-card">
+            <img
+              src={"/assets/projects-img/Books-search-engine.jpg"}
+              alt=" project"
+              className="card-img-top"
+            />
+
+            <div className="portfolio-content ">
+              <h5 className="card-title">Project</h5>
+              <p className="portfolio-description">
+                Built with:{" "}
+                <a className="read-more" onClick={() => setButtonPopup(true)}>
+                  Read more
+                </a>
+              </p>
+            </div>
+          </div>
+          {/* - */}
+          {/* - */}
+          <div className="col-12 col-md-6 col-lg-4 portfolio-card">
             <div className="card">
               <img
                 src={"/assets/projects-img/Books-search-engine.jpg"}
                 alt=" project"
                 className="card-img-top"
               />
-              <div className="card-body">
+
+              <div
+                className="portfolio-content "
+                onClick={() => setButtonPopup(true)}
+              >
                 <h5 className="card-title">Project</h5>
-                <p>
+                <p className="portfolio-description">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Consequatur quibusdam minus harum accusamus natus soluta eos
                   incidunt excepturi adipisci repellendus eligendi eum, id
@@ -41,16 +66,21 @@ const Portfolio = () => {
             </div>
           </div>
           {/* - */}
-          <div className="col-12 col-md-6 col-lg-4">
+          {/* - */}
+          <div className="col-12 col-md-6 col-lg-4 portfolio-card">
             <div className="card">
               <img
                 src={"/assets/projects-img/Books-search-engine.jpg"}
                 alt=" project"
                 className="card-img-top"
               />
-              <div className="card-body">
+
+              <div
+                className="portfolio-content "
+                onClick={() => setButtonPopup(true)}
+              >
                 <h5 className="card-title">Project</h5>
-                <p>
+                <p className="portfolio-description">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Consequatur quibusdam minus harum accusamus natus soluta eos
                   incidunt excepturi adipisci repellendus eligendi eum, id
@@ -60,17 +90,22 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          {/* - */}{" "}
-          <div className="col-12 col-md-6 col-lg-4">
+          {/* - */}
+          {/* - */}
+          <div className="col-12 col-md-6 col-lg-4 portfolio-card">
             <div className="card">
               <img
                 src={"/assets/projects-img/Books-search-engine.jpg"}
                 alt=" project"
                 className="card-img-top"
               />
-              <div className="card-body">
+
+              <div
+                className="portfolio-content "
+                onClick={() => setButtonPopup(true)}
+              >
                 <h5 className="card-title">Project</h5>
-                <p>
+                <p className="portfolio-description">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Consequatur quibusdam minus harum accusamus natus soluta eos
                   incidunt excepturi adipisci repellendus eligendi eum, id
@@ -83,6 +118,10 @@ const Portfolio = () => {
           {/* - */}
         </div>
       </div>
+      <Popupbox trigger={buttonPopup} setTrigger={setButtonPopup}>
+        {" "}
+        <h3>My Popup</h3>{" "}
+      </Popupbox>
     </div>
   );
 };
