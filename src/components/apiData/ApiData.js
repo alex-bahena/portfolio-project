@@ -4,7 +4,6 @@ import Popupbox from "../popup-component/Popupbox";
 const ApiData = ({ limit }) => {
   //Overflow: The description of each project is shown by an overflow animation and a popup.
   const [buttonPopup, setButtonPopup] = useState(false);
-  console.log(setButtonPopup);
 
   useEffect(() => {
     buttonPopup
@@ -14,8 +13,12 @@ const ApiData = ({ limit }) => {
 
   // ____________________________________________________________________________________
 
-  // Github info repos API call
+  // Capitalized the first letter of a word and prevents any other letter being capitalized.
+  const capitalizedFirstLetter = (str) =>
+    str[0].toUpperCase() + str.slice(1).toLowerCase();
+  //__________________________________________________________________________________________
 
+  // Github info repos API call
   const [gitData, setGitData] = useState([]);
   useEffect(() => {
     fetch("https://api.github.com/users/AlejandroBahSan/repos")
@@ -24,6 +27,15 @@ const ApiData = ({ limit }) => {
       .catch((err) => console.log(err));
   }, []);
 
+  const [clickHandler, setClickHandler] = useState(12345);
+
+  const handleClick = (state, e) => {
+    setButtonPopup(state);
+    setClickHandler(e.target.id);
+    console.log(clickHandler);
+    return e.target.id;
+  };
+
   //Reference source https://bobbyhadz.com/blog/react-foreach.
   //Const render_api_data_JSX is equal to an empty array in order to push(render) the information obtained by the iteration(forEach) fuction.
   //The method filter and map, are used to populated with the results obtained after the forEach fuction on every element found in the iteration.
@@ -31,22 +43,17 @@ const ApiData = ({ limit }) => {
   const render_api_data_JSX = [];
   const limitData = limit.map((el) => el.id);
 
-  // Capitalized the first letter of a word and prevents any other letter being capitalized.
-  const capitalizedFirstLetter = (str) =>
-    str[0].toUpperCase() + str.slice(1).toLowerCase();
-  //__________________________________________________________________________________________
   limitData.forEach((element) => {
     gitData
       .filter((x) => x.id === element)
       .map((list) => {
-        console.log(list);
-
         return render_api_data_JSX.push(
           <>
             {/* - */}
             <div
-              className=" col-12 col-md-6 col-lg-4 portfolio-card"
               key={list.id}
+              id={list.id}
+              className="col-12 col-md-6 col-lg-4 portfolio-card"
             >
               {list ? (
                 <>
@@ -72,7 +79,8 @@ const ApiData = ({ limit }) => {
                       <br></br>
                       <a
                         className="read-more"
-                        onClick={() => setButtonPopup(true)}
+                        onClick={(e) => handleClick(true, e)}
+                        id={list.id}
                       >
                         Read more
                       </a>
@@ -84,9 +92,13 @@ const ApiData = ({ limit }) => {
                   <h5 className="card-title">Loading...</h5>
                 </div>
               )}
-              <Popupbox trigger={buttonPopup} setTrigger={setButtonPopup}>
+              <Popupbox
+                trigger={buttonPopup}
+                setTrigger={setButtonPopup}
+                list={list}
+                idClicked={clickHandler}
+              >
                 {" "}
-                <h3>My Popup</h3>{" "}
               </Popupbox>
             </div>
             {/* - */}
