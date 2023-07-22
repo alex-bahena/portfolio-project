@@ -75,6 +75,7 @@ const ApiData = ({ limit }) => {
                             : projectList.topics}
                           <br></br>
                           <a
+                            href={() => false}
                             className="read-more"
                             onClick={(e) => handleClick(true, e)}
                             id={projectList.id}

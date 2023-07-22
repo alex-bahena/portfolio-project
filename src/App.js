@@ -18,6 +18,7 @@ function App() {
       <Aboutme />
       <Portfolio />
       <Experience />
+      {/* <Projects /> */}
     </>
   );
 }

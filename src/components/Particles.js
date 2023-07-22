@@ -24,7 +24,7 @@ const Particle = () => {
       options={{
         particles: {
           color: {
-            value: "#ffffff",
+            value: "3C3C3C",
           },
           links: {
             color: "#ffffff",
