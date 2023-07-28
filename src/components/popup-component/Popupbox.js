@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
+import { faWindowMaximize, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
   const [repoId, setRepoId] = useState([]);
@@ -23,7 +23,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
   }, [trigger]);
 
   return trigger ? (
-    <div onClick={() => setTrigger(false)} className="popup">
+    <div className="popup">
       <div className="popup-inner">
         {repoId && (
           <>
@@ -32,15 +32,15 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
               alt="popup-img "
               className="popup-img"
             />
-            <h4 className="popup-repoName">
+            <h1 className="popup-repoName">
               {repoId.name.replace(/[_-]/g, " ")}
-            </h4>
-            <h5>{repoId.description}</h5>
-            <h6>
+            </h1>
+            <p className="popup-repoDescription">{repoId.description}</p>
+            <p className="popup-repoBuiltWith">
               {"Built with: " +
                 //Capitalized the first letter of the name of each tecnology applied on every project got from the Github API
                 repoId.topics.map(capitalizedFirstLetter).join(", ")}
-            </h6>
+            </p>
 
             <div className="githubRepoLink">
               <FontAwesomeIcon className="icon" icon={faGithub} size="2x" />
@@ -72,15 +72,13 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
             ) : (
               <></>
             )}
+            <div onClick={() => setTrigger(false)} className="return-main">
+              <FontAwesomeIcon className="icon" icon={faXmark} size="2x" />
+            </div>
           </>
         )}
-        <button
-          type="button"
-          className="close-btn "
-          aria-label="Close"
-        ></button>
-        {trigger.children}
       </div>
+      {trigger.children}
     </div>
   ) : (
     ""

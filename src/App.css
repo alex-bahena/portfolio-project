@@ -1,24 +1,44 @@
-/* _____________________STYLES____________________ */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url(https://db.onlinewebfonts.com/c/7706838253ee4576c2622a94148f1a31?family=MicroSquare+Bold);
+@import url(https://db.onlinewebfonts.com/c/d3bfee78e8ead45d9057a95bb6ff5de8?family=Europa-Bold);
+@import url(https://db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa+Regular);
 
 :root {
+  /* _____________________*COLORS*____________________ */
   --primary-white: #fff;
   --primary-light-grey: #f4f4f4;
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666666;
   --primary-green: #17df6e;
-  --primary-dark: rgb(59, 57, 57);
+  --primary-dark: #2b2929;
   --primary-black: #000000;
   --primary-hover-red: #f33501;
+  /* _____________________*FONTS*____________________ */
+  --title-font: "MicroSquare Bold", sans-serif;
+  --general-font: "Europa Regular", sans-serif;
 }
-body {
-  font-family: "Roboto Condensed", sans-serif !important;
-}
-/* _____________________*PORTFOLIO*____________________ */
 
-/* _____________________NARBAR STYLES____________________ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Europa-Bolder", sans-serif;
+}
+/* Font and gif adjust tomorrow---api social media network adjust */
+/* body {
+  font-family: "Montserrat" !important, sans-serif;
+} */
+/* _____________________*PORTFOLIO STYLES*____________________ */
+
+/* _____________________NAVBAR STYLES____________________ */
 nav {
   z-index: 2;
+}
+
+.nav-main {
+  padding: 1px !important;
 }
 
 .logo {
@@ -27,7 +47,7 @@ nav {
 
 /* _____________________MENU LINKS____________________ */
 .navbar-custom {
-  background-color: rgb(43, 41, 41) !important;
+  background-color: var(--primary-dark) !important;
 }
 
 nav a.nav-link {
@@ -44,7 +64,7 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark);
+  border-top: 0.1875rem solid var(--primary-dark-grey);
 }
 
 .navbar-brand {
@@ -75,7 +95,7 @@ nav ul li {
   background: url(/assets/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 85vh;
 }
 
 .main-info {
@@ -94,20 +114,23 @@ nav ul li {
 
 .main-info h1 {
   color: var(--primary-green);
-  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 800;
 }
 
 /* _____________________MEDIA QUERY HEADER STYLES____________________ */
 @media (max-width: 991px) {
   .header-wrapper {
-    height: 86vh;
+    height: 87vh;
   }
 }
 
 /* _____________________TYPED TEXT____________________ */
 .typed-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-white);
+  font-family: var(--general-font);
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -147,12 +170,6 @@ nav ul li {
   bottom: 0;
 }
 
-.learnmoretext {
-}
-
-.learnmorearrow {
-}
-
 /* _____________________PARTICLES____________________ */
 #tsparticles {
   position: absolute;
@@ -187,14 +204,17 @@ nav ul li {
 
 .about-heading {
   color: var(--primary-green);
-  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 800;
 }
 
 .aboutme-description {
   text-align: justify;
   text-justify: inter-word;
+  font-family: var(--general-font);
+  font-weight: 200;
 }
-/* _____________________ABOUT ME MEDIA____________________ */
+/* _____________________ABOUT ME MEDIA QUERY____________________ */
 
 @media (max-width: 991px) {
   .aboutme-container {
@@ -280,14 +300,14 @@ nav ul li {
 
 .portfolio-card {
   height: auto;
-  width: 25rem;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .portfolio-card .card-img-top {
-  border: 0.0625rem solid #eee;
-  box-shadow: 0px 0.3125rem 0.875rem #ddd;
+  border: 0.0625rem solid var(--primary-black);
+  box-shadow: 0px 0.3125rem 0.9rem var(--primary-grey);
   border-radius: 0.9375rem;
   width: 100%;
   height: auto;
@@ -303,7 +323,8 @@ nav ul li {
 
 .portfolio-heading {
   color: var(--primary-green);
-  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 800;
 }
 
 /* _____________________OVERFLOW____________________ */
@@ -325,10 +346,13 @@ nav ul li {
 .card-title,
 .portfolio-description {
   color: #fff;
+  font-family: var(--title-font);
+  font-weight: 800;
 }
 
 .portfolio-content .read-more {
-  font-weight: bolder;
+  font-family: var(--general-font);
+  font-weight: 200;
   cursor: pointer;
   color: var(--primary-green);
 }
@@ -336,7 +360,7 @@ nav ul li {
   left: 0;
 }
 
-/* _____________________Popup box____________________ */
+/* _____________________POPUP BOX____________________ */
 
 .popup {
   position: fixed;
@@ -352,15 +376,32 @@ nav ul li {
 
 .popup-inner {
   position: relative;
-  padding: 2rem;
+  padding: 2.5rem;
   width: 100%;
   max-width: 40rem;
   color: var(--primary-white);
   background-color: var(--primary-black);
 }
 .popup-repoName {
+  font-family: var(--title-font);
+  font-weight: 800;
   text-align: center;
+  font-size: 1.4rem;
 }
+
+.popup-repoDescription {
+  font-family: var(--general-font);
+  font-weight: 400;
+  text-align: justify;
+  font-size: 1rem;
+}
+.popup-repoBuiltWith {
+  font-family: var(--general-font);
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
 .githubRepoLink {
   width: 50%;
   float: left;
@@ -373,35 +414,46 @@ nav ul li {
 
 .githubRepoLink .read-more,
 .deploymentlink .read-more {
-  font-size: 1.3rem;
-  font-weight: bolder;
+  font-size: 1rem;
+  font-family: var(--general-font);
+  font-weight: 200;
   cursor: pointer;
   color: var(--primary-green);
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  position: absolute;
+  bottom: 2%;
 }
 
-.popup-inner .close-btn {
-  position: relative;
-  top: 0.2rem;
-  right: 0.5rem;
+.githubRepoLink .icon,
+.deploymentlink .icon {
   font-size: 1.5rem;
-  background-color: transparent;
-  color: var(--primary-white);
+  position: absolute;
+  bottom: 2%;
+}
+
+.popup-inner .return-main {
+  position: absolute;
+  top: 9px;
+  right: 12px;
   cursor: pointer;
+  font-size: 0.8rem;
   border: 0;
   transition: 0.2s;
 }
 
-.popup-inner .close-btn:hover {
-  font-size: 1.8rem;
+.popup-inner .return-main:hover {
+  font-size: 0.9rem;
   transition: 0.5s;
 }
 
 .popup-inner .popup-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0.0625rem solid #eee;
   border-radius: 0.9375rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   width: 100%;
   height: auto;
   transition: 2s;
@@ -410,15 +462,32 @@ nav ul li {
 /*------------ POPUP MEDIA ------------------*/
 @media (max-width: 768px) {
   /* popup inner links */
+
+  /* ajust font size */
+  .popup-repoDescription {
+    text-align: left;
+    font-size: 0.8rem;
+  }
   .githubRepoLink {
     width: 100%;
     float: none;
     margin-bottom: 1rem;
+    position: relative;
+    bottom: 2%;
   }
 
   .deploymentlink {
     width: 100%;
     float: none;
+    position: relative;
+    bottom: 2%;
+  }
+
+  .githubRepoLink .icon,
+  .deploymentlink .icon {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 2%;
   }
 }
 
@@ -523,7 +592,8 @@ nav ul li {
 }
 
 .experience h1 {
-  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 800;
   color: var(--primary-green);
 }
 

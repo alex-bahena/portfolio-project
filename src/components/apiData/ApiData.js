@@ -51,7 +51,11 @@ const ApiData = ({ limit }) => {
               {projectList ? (
                 <>
                   <img
-                    src={"/assets/projects-img/" + projectList.name + ".jpg"}
+                    src={
+                      "/assets/projects-img-preview/" +
+                      projectList.name +
+                      ".jpg"
+                    }
                     alt=" project"
                     className="card-img-top"
                   />

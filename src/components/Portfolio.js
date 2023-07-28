@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-wrapper">
       <div className="container overflow-hidden">
-        <h1 className="portfolio-heading text-center py-5">portfolio</h1>
+        <h1 className="portfolio-heading text-center py-5">My recent work</h1>
         <div className="row g-3 m-2">
           {/* - */}
           <ApiData
@@ -14,6 +14,7 @@ const Portfolio = () => {
               { id: 513358450 },
               { id: 492967623 },
               { id: 519930549 },
+              { id: 519010772 },
               { id: 511682423 },
               { id: 502769004 },
               { id: 475742805 },
