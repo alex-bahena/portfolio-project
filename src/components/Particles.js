@@ -65,6 +65,16 @@ const Particle = () => {
           size: {
             value: { min: 1, max: 5 },
           },
+          responsive: [
+            {
+              maxWidth: 500,
+              options: {
+                particles: {
+                  number: { limit: 50 },
+                },
+              },
+            },
+          ],
         },
       }}
     />

@@ -2,8 +2,8 @@ import React from "react";
 
 const Aboutme = () => {
   return (
-    <div className="aboutme-wrapper">
-      <div className="aboutme-container container py-5">
+    <div className="aboutme-wrapper" id="about-me">
+      <div className="aboutme-container container py-5 ">
         <div className="row">
           <div className="col-lg-6 col-xm-12">
             <div className="image-wrap">

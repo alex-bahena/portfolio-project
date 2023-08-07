@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faWindowMaximize, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
-  const [repoId, setRepoId] = useState([]);
+  const [GithubRepoID, setGithubRepoID] = useState([]);
   const capitalizedFirstLetter = (str) =>
     str[0].toUpperCase() + str.slice(1).toLowerCase();
 
@@ -19,33 +19,33 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
     let projectId = gitDataArr.filter(
       (projects) => projects.id === idClickedInt
     );
-    setRepoId(projectId[0]);
+    setGithubRepoID(projectId[0]);
   }, [trigger]);
 
   return trigger ? (
     <div className="popup">
       <div className="popup-inner">
-        {repoId && (
+        {GithubRepoID && (
           <>
             <img
-              src={"/assets/projects-img/" + repoId.name + ".jpg"}
+              src={"/assets/projects-img/" + GithubRepoID.name + ".jpg"}
               alt="popup-img "
               className="popup-img"
             />
             <h1 className="popup-repoName">
-              {repoId.name.replace(/[_-]/g, " ")}
+              {GithubRepoID.name.replace(/[_-]/g, " ")}
             </h1>
-            <p className="popup-repoDescription">{repoId.description}</p>
+            <p className="popup-repoDescription">{GithubRepoID.description}</p>
             <p className="popup-repoBuiltWith">
               {"Built with: " +
                 //Capitalized the first letter of the name of each tecnology applied on every project got from the Github API
-                repoId.topics.map(capitalizedFirstLetter).join(", ")}
+                GithubRepoID.topics.map(capitalizedFirstLetter).join(", ")}
             </p>
 
             <div className="githubRepoLink">
               <FontAwesomeIcon className="icon" icon={faGithub} size="2x" />
               <a
-                href={repoId.html_url}
+                href={GithubRepoID.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="read-more"
@@ -53,7 +53,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
                 Github repository
               </a>
             </div>
-            {repoId.homepage !== repoId.html_url ? (
+            {GithubRepoID.homepage !== GithubRepoID.html_url ? (
               <div className="deploymentlink">
                 <FontAwesomeIcon
                   className="icon"
@@ -61,7 +61,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
                   size="2x"
                 />
                 <a
-                  href={repoId.homepage}
+                  href={GithubRepoID.homepage}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="read-more"

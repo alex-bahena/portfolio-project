@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faFileCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
-import Popupbox from "./popup-component/Popupbox";
 
 const Projects = () => {
   const [buttonPopup, setButtonPopup] = useState(false);

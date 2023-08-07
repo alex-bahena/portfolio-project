@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Popupbox from "../popup-component/Popupbox";
+import { githubReposAPI } from "../../utils/githubReposAPI";
 
-const ApiData = ({ limit }) => {
+const ReposManagement = ({ limit }) => {
   //Overflow: The description of each project is shown by an overflow animation and a popup.
   const [buttonPopup, setButtonPopup] = useState(false);
 
@@ -15,8 +16,7 @@ const ApiData = ({ limit }) => {
   // Github info repos API call
   const [gitData, setGitData] = useState([]);
   useEffect(() => {
-    fetch("https://api.github.com/users/AlejandroBahSan/repos")
-      .then((response) => response.json())
+    githubReposAPI()
       .then((data) => setGitData(data))
       .catch((err) => console.log(err));
   }, []);
@@ -114,4 +114,4 @@ const ApiData = ({ limit }) => {
   return <>{render_api_data_JSX}</>;
 };
 
-export default ApiData;
+export default ReposManagement;
