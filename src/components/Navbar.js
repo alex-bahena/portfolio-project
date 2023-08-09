@@ -46,7 +46,11 @@ const Navbar = () => {
               </HashLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-contact nav-link" to="/contact">
+              <Link
+                type="button"
+                className="nav-contact nav-link"
+                to="/contact"
+              >
                 Say Hello
               </Link>
             </li>
@@ -73,11 +77,11 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            {/* <li className="nav-item">
-              <HashLink className="nav-experience nav-link" to="#about-me">
+            <li className="nav-item">
+              {/* <HashLink className="nav-experience nav-link" to="#about-me">
                 Experience
-              </HashLink>
-            </li> */}
+              </HashLink> */}
+            </li>
             <li className="nav-item">
               <Link className="nav-home nav-link" to="/main">
                 <FontAwesomeIcon icon={faHome} style={{ color: "#fff" }} />

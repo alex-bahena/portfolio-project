@@ -16,7 +16,7 @@ const Main = () => {
       <Aboutme />
       <Portfolio />
       <Experience />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
