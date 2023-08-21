@@ -7,9 +7,13 @@ import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [URLParam, setURLParam] = useState("");
-
+  // const [hasTagChanged, setHashTagChanged] = useEffect("");
+  let URLValue = window.location.href;
+  let hashTaghasChanged = window.location.hash;
+  console.log(hashTaghasChanged);
+  // {------------------------- NAVBAR LOGIC -------------------------}
   useEffect(() => {
-    const URLValue = window.location.href;
+    //URLArray returns the - from www.thing /main or /contact
     let URLArray = URLValue.split("/").slice(-1)[0];
     if (URLValue) {
       setURLParam(URLArray);
@@ -17,12 +21,21 @@ const Navbar = () => {
       setURLParam("main");
       console.log("here");
     }
-  });
+  }, [URLValue]);
 
   console.log(URLParam);
+  console.log(URLValue.includes("#"));
+
+  // {------------------------- HASHTAG LOGIC -------------------------}
+
+  useEffect(() => {
+    if (URLValue.includes("#")) {
+      return window.location.href.split("#")[0];
+    }
+  }, [hashTaghasChanged]);
 
   return URLParam === "main" ? (
-    <nav className="nav-main navbar-custom navbar navbar-expand-lg">
+    <nav className="nav-main navbar-custom navbar navbar-expand-lg" id="header">
       <div className="header container">
         <a className="navbar-brand" href={() => false}>
           <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
@@ -41,7 +54,11 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <HashLink className="nav-experience nav-link" to="#about-me">
+              <HashLink
+                className="nav-experience nav-link"
+                smooth={true}
+                to="#about-me"
+              >
                 Experience
               </HashLink>
             </li>

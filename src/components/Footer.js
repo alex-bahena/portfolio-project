@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubSquare,
@@ -8,43 +9,51 @@ import {
   faBootstrap,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-  //   const location = useLocation();
-  //   const navigate = useNavigate();
+  // function hashTagHasChanged() {
+  //   return window.location.href.split("#")[0];
+  // }
+  // window.onhashchange = hashTagHasChanged;
+
+  // console.log("HERE", window.location.href.split("#")[0]);
+
   return (
     <footer className="footer">
       <div className="container-fluid">
         <div className="row">
-          <div className="intro-footer text-center col-lg-10 col-md-12 col-sm-12 d-lg-flex flex-md-row flex-sm-column justify-content-center">
-            <h2 className="lets-connect flex-lg-fill">Let's connect</h2>
+          <div className="intro-footer text-center col-lg-10 col-md-12 justify-content-center">
+            <h2 className="lets-connect flex-lg-fill">Let's talk</h2>
             <p className="chat-invite flex-lg-fill">
               Interested in working together? We should queue up <br /> a time
-              to chat. I’ll buy the coffee.
+              to chat.
             </p>
             <Link to="/contact">
-              <button type="button" className="footer-contact-btn">
-                Say Hello
+              <button type="button" className="footer-contact-btn flex-lg-fill">
+                Let's do it!
               </button>
             </Link>
-            {/* <div className="footer-contact-btn flex-lg-fill ">
-            </div> */}
           </div>
         </div>
         <div className="row">
           <div className="footer-position"></div>
           <div className="footer-logo text-center">
-            <a className="navbar-brand" href={() => false}>
-              <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
-            </a>
+            <HashLink className="back-header" smooth={true} to="#header">
+              <img
+                className="footer-logo-img"
+                src={"/assets/abslogofooter.png"}
+                alt="logo..."
+              />
+            </HashLink>
             <p className="moto">
-              Living, learning, & leveling up one day at a time.
+              Living, learning, & leveling up
+              <br /> one day at a time.
             </p>
           </div>
         </div>
 
-        <div className="col-lg-12 col-md-6 col-sm-6 ">
+        <div className="col-lg-12 col-md-12 col-sm-6 ">
           <div className="social-field d-flex flex-row justify-content-center">
             <p className="github">
               <a
@@ -53,7 +62,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="github-link"
               >
-                <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+                <FontAwesomeIcon icon={faGithubSquare} size="2x" />
               </a>
             </p>
             <p className="linkedIn social-link">
@@ -64,7 +73,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="linkedIn-link"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
             </p>
             <p className="twitter social-link ">
@@ -75,7 +84,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="twitter-link"
               >
-                <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
+                <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
               </a>
             </p>
             <p className="gmail social-link ">
@@ -84,22 +93,31 @@ const Footer = () => {
                 href="mailto:alejandro.bahsan.dev@gmail.com"
                 className="gmail-link"
               >
-                <FontAwesomeIcon icon={faEnvelope} size="3x" />
+                <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
               </a>
             </p>
           </div>
-
-          <p className="own-by">
+          <p className="handcrafted text-center">
             Handcrafted with love{" "}
             <span role="img" aria-label="love">
               ❤️
             </span>{" "}
-            by Alejandro Bahena
+            by <br />
+            <span className="my-name">Alejandro Bahena</span>
           </p>
-          <p className="made-with">
-            Built with <FontAwesomeIcon icon={faBootstrap} size="2x" />
-            <FontAwesomeIcon icon={faReact} size="2x" />
-          </p>
+
+          <table className="made-with">
+            <tr>
+              <td>An integration made with </td>
+              <td className="boostrap-logo">
+                <FontAwesomeIcon icon={faBootstrap} size="2x" />
+              </td>
+              <td className="react-logo">
+                {" "}
+                <FontAwesomeIcon icon={faReact} size="2x" />
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </footer>
