@@ -1,26 +1,11 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3,
-  faSass,
-  faJs,
-  faReact,
-  faBootstrap,
-  faNodeJs,
-  faAws,
-  faGitSquare,
-  faGithub,
-  faJira,
-  faSlack,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
 const Experience = () => {
   return (
     <div className="experience border-top">
       <div className="d-flex justify-content-center my-5">
+        {/* icons - https://iconify.design/ */}
         <h1>Experience</h1>
       </div>
 
@@ -34,17 +19,41 @@ const Experience = () => {
               scalable software
             </p>
             <ul>
-              <li>
-                <FontAwesomeIcon icon={faHtml5} /> HTML
+              <li className="mb-2">
+                HTML{" "}
+                <Icon
+                  icon="vscode-icons:file-type-html"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                CSS{" "}
+                <Icon
+                  icon="vscode-icons:file-type-css"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Sass{" "}
+                <Icon
+                  icon="skill-icons:sass"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
               </li>
               <li>
-                <FontAwesomeIcon icon={faCss3} /> CSS
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faSass} /> Sass
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faJs} /> Javascript
+                Javascript{" "}
+                <Icon
+                  icon="skill-icons:javascript"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
               </li>
             </ul>
           </div>
@@ -57,18 +66,46 @@ const Experience = () => {
             <h3>Frontend</h3>
 
             <p>
-              I like to translate ideas into functional and appealing
-              interactive applications.
+              I like to translate ideas into functional and interactive
+              applications.
             </p>
             <ul>
-              <li>
-                <FontAwesomeIcon icon={faReact} /> React
+              <li className="mb-2">
+                React{" "}
+                <Icon
+                  icon="skill-icons:react-light"
+                  style={{
+                    fontSize: "2.2rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Boostrap{" "}
+                <Icon
+                  icon="skill-icons:bootstrap"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Handlebars.js{" "}
+                <Icon
+                  icon="devicon:handlebars"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
               <li>
-                <FontAwesomeIcon icon={faBootstrap} /> Boostrap
+                TailwindCSS{" "}
+                <Icon
+                  icon="vscode-icons:file-type-tailwind"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
-              <li>Handlebars.js</li>
-              <li>TailwindCSS</li>
             </ul>
           </div>
         </div>
@@ -79,28 +116,93 @@ const Experience = () => {
             <h3>Backend</h3>
             <p>Tools I use to develope and work behind the scenes</p>
             <ul>
-              <li>
-                Node.js <FontAwesomeIcon icon={faNodeJs} />
+              <li className="mb-2">
+                Node.js{" "}
+                <Icon
+                  icon="skill-icons:nodejs-light"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
-              <li>
-                AWS S3 <FontAwesomeIcon icon={faAws} />
+              <li className="mb-2">
+                AWS S3{" "}
+                <Icon
+                  icon="skill-icons:aws-light"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
-              <li>Express.js </li>
-              <li>
-                RESTful API <FontAwesomeIcon icon="fa-thin fa-webhook" />
+              <li className="mb-2">
+                Express{" "}
+                <Icon
+                  icon="skill-icons:expressjs-dark"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                RESTful API{" "}
+                <Icon
+                  icon="icon-park-solid:api"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
             </ul>
-            {/* icons - http://fizzed.com/oss/font-mfizz */}
             <h5 className="database-orms">Database and ORMs</h5>
             <ul>
-              <li>
-                MySQL <i className="icon-mysql"></i>
+              <li className="mb-2">
+                MySQL{" "}
+                <Icon
+                  icon="devicon:mysql"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
               </li>
-              <li>
-                MongoDB <i className="icon-mongodb"></i>
+              <li className="mb-2">
+                MongoDB{" "}
+                <Icon
+                  icon="devicon:mongodb"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </li>
-              <li>Sequelize</li>
-              <li>Mongoose</li>
+              <li className="mb-2">
+                Sequelize{" "}
+                <Icon
+                  icon="devicon:sequelize"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Mongoose{" "}
+                <Icon
+                  icon="devicon:mongoose"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
+              </li>
+            </ul>
+            <h5 className="database-orms">Testing Framework</h5>
+            <ul>
+              <li>
+                Jest{" "}
+                <Icon
+                  icon="vscode-icons:file-type-jest-snapshot"
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
+              </li>
             </ul>
           </div>
         </div>
@@ -111,20 +213,50 @@ const Experience = () => {
             <h3>Others</h3>
             <p>Active learning is always important!</p>
             <ul>
-              <li>
-                Git <FontAwesomeIcon icon={faGitSquare} />
+              <li className="mb-2">
+                Git{" "}
+                <Icon
+                  icon="devicon:git"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Github{" "}
+                <Icon
+                  icon="devicon:github"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Slack{" "}
+                <Icon
+                  icon="devicon:slack"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
+              </li>
+              <li className="mb-2">
+                Discord{" "}
+                <Icon
+                  icon="skill-icons:discord"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
               </li>
               <li>
-                Github <FontAwesomeIcon icon={faGithub} />
-              </li>
-              <li>
-                Slack <FontAwesomeIcon icon={faSlack} />
-              </li>
-              <li>
-                Discord <FontAwesomeIcon icon={faDiscord} />
-              </li>
-              <li>
-                Jira <FontAwesomeIcon icon={faJira} />
+                Jira{" "}
+                <Icon
+                  icon="logos:jira"
+                  style={{
+                    fontSize: "1.8rem",
+                  }}
+                />
               </li>
             </ul>
           </div>
