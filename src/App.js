@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Particle from "./components/Particles";
 import Aboutme from "./components/Aboutme";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Aboutme />
       <Projects />
+      <Experience />
     </>
   );
 }
