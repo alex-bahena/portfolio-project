@@ -3,11 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <div className="container">
+    <nav className="navbar-custom navbar navbar-expand-lg navbar-light">
+      <div className="header container">
         <a className="navbar-brand" href="#">
-          <img className="logo" src={"/assets/abslogo.gif"} alt="logo..."></img>
+          <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
         </a>
+        {/* <div className="logo">
+          <span>A</span>
+          <h3>Alejandro Bahena</h3>
+        </div> */}
         <button
           className="navbar-toggler"
           type="button"
