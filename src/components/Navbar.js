@@ -7,10 +7,10 @@ import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [URLParam, setURLParam] = useState("");
-  // const [hasTagChanged, setHashTagChanged] = useEffect("");
   let URLValue = window.location.href;
-  let hashTaghasChanged = window.location.hash;
-  console.log(hashTaghasChanged);
+  // const [hasTagChanged, setHashTagChanged] = useEffect("");
+  // let hashTaghasChanged = window.location.hash;
+
   // {------------------------- NAVBAR LOGIC -------------------------}
   useEffect(() => {
     //URLArray returns the - from www.thing /main or /contact
@@ -23,23 +23,20 @@ const Navbar = () => {
     }
   }, [URLValue]);
 
-  console.log(URLParam);
-  console.log(URLValue.includes("#"));
-
   // {------------------------- HASHTAG LOGIC -------------------------}
 
-  useEffect(() => {
-    if (URLValue.includes("#")) {
-      return window.location.href.split("#")[0];
-    }
-  }, [hashTaghasChanged]);
+  // useEffect(() => {
+  //   if (URLValue.includes("#")) {
+  //     return window.location.href.split("#")[0];
+  //   }
+  // }, [hashTaghasChanged]);
 
   return URLParam === "main" ? (
     <nav className="nav-main navbar-custom navbar navbar-expand-lg" id="header">
       <div className="header container">
-        <a className="navbar-brand" href={() => false}>
+        <Link className="navbar-brand" to="/main">
           <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -78,9 +75,9 @@ const Navbar = () => {
   ) : (
     <nav className="nav-main navbar-custom navbar navbar-expand-lg">
       <div className="header container">
-        <a className="navbar-brand" href={() => false}>
+        <Link className="navbar-brand" to="/main">
           <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -95,13 +92,8 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              {/* <HashLink className="nav-experience nav-link" to="#about-me">
-                Experience
-              </HashLink> */}
-            </li>
-            <li className="nav-item">
               <Link className="nav-home nav-link" to="/main">
-                <FontAwesomeIcon icon={faHome} style={{ color: "#fff" }} />
+                <FontAwesomeIcon icon={faHome} />
               </Link>
             </li>
           </ul>

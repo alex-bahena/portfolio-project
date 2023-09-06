@@ -107,16 +107,18 @@ const Footer = () => {
           </p>
 
           <table className="made-with">
-            <tr>
-              <td>An integration made with </td>
-              <td className="boostrap-logo">
-                <FontAwesomeIcon icon={faBootstrap} size="2x" />
-              </td>
-              <td className="react-logo">
-                {" "}
-                <FontAwesomeIcon icon={faReact} size="2x" />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>An integration made with </td>
+                <td className="boostrap-logo">
+                  <FontAwesomeIcon icon={faBootstrap} size="2x" />
+                </td>
+                <td className="react-logo">
+                  {" "}
+                  <FontAwesomeIcon icon={faReact} size="2x" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

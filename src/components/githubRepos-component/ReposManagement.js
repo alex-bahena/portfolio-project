@@ -41,13 +41,9 @@ const ReposManagement = ({ limit }) => {
       .filter((projects) => projects.id === element)
       .map((projectList) => {
         return render_api_data_JSX.push(
-          <>
+          <React.Fragment key={projectList.id}>
             {/* - */}
-            <div
-              key={projectList.id}
-              id={projectList.id}
-              className="col-12 col-md-6 col-lg-4 portfolio-card"
-            >
+            <div className="col-12 col-md-6 col-lg-4 portfolio-card">
               {projectList ? (
                 <>
                   <img
@@ -61,7 +57,7 @@ const ReposManagement = ({ limit }) => {
                   />
                   {!buttonPopup && (
                     <>
-                      <div className={"portfolio-content"}>
+                      <div className="portfolio-content">
                         <h5 className="card-title">
                           {projectList.name
                             ? //Removes the hypens and undercores from the name of each project obtained from the Github API
@@ -78,21 +74,20 @@ const ReposManagement = ({ limit }) => {
                                 .join(", ")
                             : projectList.topics}
                           <br></br>
-                          <a
-                            href={() => false}
+                          <button
                             className="read-more"
                             onClick={(e) => handleClick(true, e)}
                             id={projectList.id}
                           >
                             Read more
-                          </a>
+                          </button>
                         </p>
                       </div>
                     </>
                   )}
                 </>
               ) : (
-                <div className="portfolio-content ">
+                <div className="portfolio-content">
                   <h5 className="card-title">Loading...</h5>
                 </div>
               )}
@@ -106,7 +101,7 @@ const ReposManagement = ({ limit }) => {
               </Popupbox>
             </div>
             {/* - */}
-          </>
+          </React.Fragment>
         );
       });
   });

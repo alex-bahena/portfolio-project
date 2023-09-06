@@ -135,7 +135,7 @@ nav {
 /* _____________________HEADER STYLES____________________ */
 .header-wrapper {
   position: relative;
-  background: url(/assets/background.jpg) no-repeat;
+  background: url(../public/assets/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 85vh;
@@ -443,8 +443,16 @@ div .see-morebtn:hover {
 .portfolio-content .read-more {
   font-family: var(--generic-font);
   font-weight: 200;
+  text-decoration: underline;
   cursor: pointer;
   color: var(--primary-green);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.portfolio-content .read-more:hover {
+  font-weight: 800;
 }
 
 @media (hover: hover) {
@@ -814,6 +822,7 @@ nav a.nav-home {
   font-size: 1.5rem;
   text-align: center;
   transition: 1s;
+  color: var(--primary-light-grey);
 }
 
 nav a.nav-home:hover {

@@ -31,8 +31,8 @@ const Portfolio = () => {
 
       <div className="see-more-wrapper   col-lg-12">
         <a
-          class="see-morebtn btn btn-primary"
-          href="https://github.com/AlejandroBahSan"
+          className="see-morebtn btn btn-primary"
+          href={"https://github.com/AlejandroBahSan"}
           role="button"
           target="_blank"
           rel="noopener noreferrer"

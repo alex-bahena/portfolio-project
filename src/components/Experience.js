@@ -19,7 +19,7 @@ const Experience = () => {
               scalable software
             </p>
             <ul>
-              <li className="mb-2">
+              <li key="html" id="html" className="mb-2">
                 HTML{" "}
                 <Icon
                   icon="vscode-icons:file-type-html"
@@ -28,7 +28,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="css" id="css" className="mb-2">
                 CSS{" "}
                 <Icon
                   icon="vscode-icons:file-type-css"
@@ -37,7 +37,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="sass" id="sass" className="mb-2">
                 Sass{" "}
                 <Icon
                   icon="skill-icons:sass"
@@ -46,7 +46,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li>
+              <li key="javascript" id="javascript">
                 Javascript{" "}
                 <Icon
                   icon="skill-icons:javascript"
@@ -70,7 +70,7 @@ const Experience = () => {
               applications.
             </p>
             <ul>
-              <li className="mb-2">
+              <li key="react" id="react" className="mb-2">
                 React{" "}
                 <Icon
                   icon="skill-icons:react-light"
@@ -79,7 +79,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="bootstrap" id="bootstrap" className="mb-2">
                 Boostrap{" "}
                 <Icon
                   icon="skill-icons:bootstrap"
@@ -88,7 +88,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="handlebars" id="handlebars" className="mb-2">
                 Handlebars.js{" "}
                 <Icon
                   icon="devicon:handlebars"
@@ -97,7 +97,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li>
+              <li key="tailwind" id="tailwind">
                 TailwindCSS{" "}
                 <Icon
                   icon="vscode-icons:file-type-tailwind"
@@ -116,7 +116,7 @@ const Experience = () => {
             <h3>Backend</h3>
             <p>Tools I use to develope and work behind the scenes</p>
             <ul>
-              <li className="mb-2">
+              <li key="node" id="node" className="mb-2">
                 Node.js{" "}
                 <Icon
                   icon="skill-icons:nodejs-light"
@@ -125,7 +125,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="aws" id="aws" className="mb-2">
                 AWS S3{" "}
                 <Icon
                   icon="skill-icons:aws-light"
@@ -134,7 +134,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="express" id="express" className="mb-2">
                 Express{" "}
                 <Icon
                   icon="skill-icons:expressjs-dark"
@@ -143,7 +143,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="api" id="api" className="mb-2">
                 RESTful API{" "}
                 <Icon
                   icon="icon-park-solid:api"
@@ -155,7 +155,7 @@ const Experience = () => {
             </ul>
             <h5 className="database-orms">Database and ORMs</h5>
             <ul>
-              <li className="mb-2">
+              <li key="mysql" id="mysql" className="mb-2">
                 MySQL{" "}
                 <Icon
                   icon="devicon:mysql"
@@ -164,7 +164,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="mongodb" id="mongodb" className="mb-2">
                 MongoDB{" "}
                 <Icon
                   icon="devicon:mongodb"
@@ -173,7 +173,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="sequelize" id="sequelize" className="mb-2">
                 Sequelize{" "}
                 <Icon
                   icon="devicon:sequelize"
@@ -182,7 +182,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="mongoose" id="mongoose" className="mb-2">
                 Mongoose{" "}
                 <Icon
                   icon="devicon:mongoose"
@@ -194,7 +194,7 @@ const Experience = () => {
             </ul>
             <h5 className="database-orms">Testing Framework</h5>
             <ul>
-              <li>
+              <li key="jest" id="jest">
                 Jest{" "}
                 <Icon
                   icon="vscode-icons:file-type-jest-snapshot"
@@ -213,7 +213,7 @@ const Experience = () => {
             <h3>Others</h3>
             <p>Active learning is always important!</p>
             <ul>
-              <li className="mb-2">
+              <li key="git" id="git" className="mb-2">
                 Git{" "}
                 <Icon
                   icon="devicon:git"
@@ -222,7 +222,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="github" id="github" className="mb-2">
                 Github{" "}
                 <Icon
                   icon="devicon:github"
@@ -231,7 +231,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="slack" id="slack" className="mb-2">
                 Slack{" "}
                 <Icon
                   icon="devicon:slack"
@@ -240,7 +240,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li className="mb-2">
+              <li key="discord" id="discord" className="mb-2">
                 Discord{" "}
                 <Icon
                   icon="skill-icons:discord"
@@ -249,7 +249,7 @@ const Experience = () => {
                   }}
                 />
               </li>
-              <li>
+              <li key="jira" id="jira">
                 Jira{" "}
                 <Icon
                   icon="logos:jira"
