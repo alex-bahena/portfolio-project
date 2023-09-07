@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faWindowMaximize, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
-  const [repoId, setRepoId] = useState([]);
+  const [GithubRepoID, setGithubRepoID] = useState([]);
   const capitalizedFirstLetter = (str) =>
     str[0].toUpperCase() + str.slice(1).toLowerCase();
 
@@ -16,35 +19,66 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
     let projectId = gitDataArr.filter(
       (projects) => projects.id === idClickedInt
     );
-    setRepoId(projectId[0]);
+    setGithubRepoID(projectId[0]);
   }, [trigger]);
 
   return trigger ? (
-    <div onClick={() => setTrigger(false)} className="popup">
+    <div className="popup">
       <div className="popup-inner">
-        {repoId && (
+        {GithubRepoID && (
           <>
             <img
-              src={"/assets/projects-img/" + repoId.name + ".jpg"}
+              src={"/assets/projects-img/" + GithubRepoID.name + ".jpg"}
               alt="popup-img "
               className="popup-img"
             />
-            <h4>{repoId.name.replace(/[_-]/g, " ")}</h4>
-            <h5>
+            <h1 className="popup-repoName">
+              {GithubRepoID.name.replace(/[_-]/g, " ")}
+            </h1>
+            <p className="popup-repoDescription">{GithubRepoID.description}</p>
+            <p className="popup-repoBuiltWith">
               {"Built with: " +
                 //Capitalized the first letter of the name of each tecnology applied on every project got from the Github API
-                repoId.topics.map(capitalizedFirstLetter).join(", ")}
-            </h5>
-            <h6>{repoId.description}</h6>
+                GithubRepoID.topics.map(capitalizedFirstLetter).join(", ")}
+            </p>
+
+            <div className="githubRepoLink">
+              <FontAwesomeIcon className="icon" icon={faGithub} size="2x" />
+              <a
+                href={GithubRepoID.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more"
+              >
+                Github repository
+              </a>
+            </div>
+            {GithubRepoID.homepage !== GithubRepoID.html_url ? (
+              <div className="deploymentlink">
+                <FontAwesomeIcon
+                  className="icon"
+                  icon={faWindowMaximize}
+                  size="2x"
+                />
+                <a
+                  href={GithubRepoID.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="read-more"
+                >
+                  Live project
+                </a>
+              </div>
+            ) : (
+              <></>
+            )}
+            <div onClick={() => setTrigger(false)} className="return-main">
+              <FontAwesomeIcon className="icon" icon={faXmark} size="2x" />
+            </div>
           </>
         )}
-        <button
-          type="button"
-          className="close-btn "
-          aria-label="Close"
-        ></button>
-        {trigger.children}
       </div>
+      {trigger.children}
     </div>
   ) : (
     ""

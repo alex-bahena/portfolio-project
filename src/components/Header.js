@@ -1,27 +1,41 @@
 import React from "react";
 import Typed from "react-typed";
+import { HashLink } from "react-router-hash-link";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <div className="header-wrapper">
       <div className="main-info">
         {" "}
-        <h1>Web Dev and pro</h1>
+        <h1>Fullstack Developer</h1>
         <Typed
           className="typed-text"
           strings={[
-            "Web Desing",
-            "Web Development",
-            "FacebookAds",
-            "Google Adds",
+            "HTML",
+            "CSS",
+            "Sass",
+            "React.js",
+            "Bootstrap",
+            "Handlebars.js",
+            "JavaScript",
+            "MySQL",
+            "MongoDB",
+            "Node.js",
+            "Express.js",
           ]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
-        <a href="#" className="btn-main-offer">
-          Contact me
-        </a>
+        <div className="learnmore">
+          <p className="learnmoretext">Learn more about what I do</p>
+          <HashLink className="learnmorearrow" to="#recent-projects">
+            <FontAwesomeIcon className="icon" icon={faArrowDown} />
+          </HashLink>
+        </div>
       </div>
     </div>
   );
