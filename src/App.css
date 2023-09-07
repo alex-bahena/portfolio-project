@@ -318,6 +318,8 @@ nav {
 
 .portfolio-wrapper {
   position: relative;
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
   z-index: 2;
   background-color: var(--primary-light-grey);
   overflow: hidden;
@@ -341,10 +343,53 @@ nav {
   cursor: pointer;
 }
 
-.portfolio-card .card-img-top:hover {
-  width: 105%;
-  transition: 0.5s;
-  margin-right: 30%;
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+  max-width: 30%;
+}
+
+.portfolio-heading {
+  color: var(--primary-green);
+  font-family: var(--title-font);
+  font-weight: 800;
+}
+
+div .see-more-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+div .see-morebtn {
+  font-size: 1.5rem;
+  border: 0.1875rem solid var(--primary-green);
+  color: var(--primary-green);
+  background-color: transparent;
+  border-radius: 1.5625rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+a .github-icon {
+  margin-right: 10px;
+}
+
+div .see-morebtn:hover {
+  border: 0.1875rem solid var(--primary-green);
+  color: var(--primary-light-grey);
+  background-color: var(--primary-green);
+}
+
+/* _____________________PORTFOLIO MEDIA QUERY____________________ */
+@media (max-width: 768px) {
+  .see-morebtn a {
+    display: flex;
+    flex: 1 1 auto;
+  }
 }
 
 .portfolio-heading {
@@ -392,18 +437,16 @@ div .see-morebtn:hover {
 
 /* _____________________OVERFLOW____________________ */
 
-.portfolio-content {
-  border: solid #000000;
-  border-radius: 0.9375rem;
-  background: rgba(0, 0, 0, 0.8);
+.overflow {
   position: absolute;
-  padding: 2px;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 25rem;
+  height: 12rem;
   top: 0;
-  left: -105%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  transition: all 1s;
+  border: 0.0625rem solid var(--primary-green);
+  cursor: pointer;
+  z-index: 0;
 }
 
 .card-title,
@@ -418,6 +461,7 @@ div .see-morebtn:hover {
   font-weight: 200;
   cursor: pointer;
   color: var(--primary-green);
+  font-size: 1.5rem;
 }
 
 @media (hover: hover) {
@@ -445,17 +489,48 @@ div .see-morebtn:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-black);
+
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-inner {
   position: relative;
   padding: 2.5rem;
   width: 100%;
-  max-width: 40rem;
-  color: var(--primary-white);
-  background-color: var(--primary-black);
+  max-width: 640px;
+  background-color: var(--primary-light-grey);
+}
+.popup-repoName {
+  font-family: var(--title-font);
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.popup-repoDescription {
+  font-family: var(--general-font);
+  font-weight: 400;
+  text-align: justify;
+  font-size: 1rem;
+}
+.popup-repoBuiltWith {
+  font-family: var(--general-font);
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.githubRepoLink {
+  width: 50%;
+  float: left;
+}
+
+.deploymentlink {
+  width: 50%;
+  float: right;
 }
 .popup-repoName {
   font-family: var(--title-font);
@@ -497,38 +572,25 @@ div .see-morebtn:hover {
   text-decoration: none;
   margin-left: 2rem;
   position: absolute;
-  bottom: 2%;
-}
-
-.githubRepoLink .icon,
-.deploymentlink .icon {
+  top: 0.2rem;
+  right: 0.5rem;
   font-size: 1.5rem;
-  position: absolute;
-  bottom: 2%;
-}
-
-.popup-inner .return-main {
-  position: absolute;
-  top: 9px;
-  right: 12px;
+  background-color: transparent;
+  color: var(--primary-white);
   cursor: pointer;
-  font-size: 0.8rem;
   border: 0;
   transition: 0.2s;
 }
 
-.popup-inner .return-main:hover {
-  font-size: 0.9rem;
+.popup-inner .close-btn:hover {
+  font-size: 1.8rem;
   transition: 0.5s;
 }
 
 .popup-inner .popup-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 0.0625rem solid #eee;
+
   border-radius: 0.9375rem;
-  margin-bottom: 0.8rem;
   width: 100%;
   height: auto;
   transition: 2s;
