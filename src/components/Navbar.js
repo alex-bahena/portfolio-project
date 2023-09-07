@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   const [URLParam, setURLParam] = useState("");
   let URLValue = window.location.href;
@@ -44,19 +48,8 @@ const Navbar = () => {
         >
           <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
         </button>
-
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                about me
-              </a>
-            </li>
             <li className="nav-item">
               <HashLink
                 className="nav-experience nav-link"
@@ -82,9 +75,9 @@ const Navbar = () => {
   ) : (
     <nav className="nav-main navbar-custom navbar navbar-expand-lg">
       <div className="header container">
-        <a className="navbar-brand" href={() => false}>
+        <Link className="navbar-brand" to="/main">
           <img className="logo" src={"/assets/abslogo.png"} alt="logo..." />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -98,14 +91,9 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            {/* <li className="nav-item">
-              <HashLink className="nav-experience nav-link" to="#about-me">
-                Experience
-              </HashLink>
-            </li> */}
             <li className="nav-item">
               <Link className="nav-home nav-link" to="/main">
-                <FontAwesomeIcon icon={faHome} style={{ color: "#fff" }} />
+                <FontAwesomeIcon icon={faHome} />
               </Link>
             </li>
           </ul>
