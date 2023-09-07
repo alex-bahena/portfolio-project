@@ -59,7 +59,7 @@ const ContactForm = () => {
       <div className="contact-form  container mt-5">
         <h2 className="greeting-message mb-5 text-center">
           Thanks for taking the time to contact me. <br />
-          Please let me know if there is anything I can help with today.
+          Please let me know if there is anything I can help with.
         </h2>
         <span className="success-message">{successMessage}</span>
         <form onSubmit={handleSubmit(onSubmit)} className="row ">

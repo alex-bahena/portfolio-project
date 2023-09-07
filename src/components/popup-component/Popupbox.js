@@ -12,15 +12,16 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
     trigger
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
+  }, [trigger]);
 
+  useEffect(() => {
     const idClickedInt = parseInt(idClicked);
     const gitDataArr = gitData.map((data) => data);
-    console.log(gitDataArr);
     let projectId = gitDataArr.filter(
       (projects) => projects.id === idClickedInt
     );
     setGithubRepoID(projectId[0]);
-  }, [trigger]);
+  }, [idClicked, gitData]);
 
   return trigger ? (
     <div className="popup">
@@ -38,7 +39,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
             <p className="popup-repoDescription">{GithubRepoID.description}</p>
             <p className="popup-repoBuiltWith">
               {"Built with: " +
-                //Capitalized the first letter of the name of each tecnology applied on every project got from the Github API
+                //Capitalized the first letter of each tecnologies applied in every project we get from the Github API
                 GithubRepoID.topics.map(capitalizedFirstLetter).join(", ")}
             </p>
 
