@@ -9,7 +9,7 @@ const Aboutme = () => {
             <div className="image-wrap">
               <img
                 className="aboutme-img"
-                src={"/assets/aboutme.png"}
+                src={"assets/aboutme.png"}
                 alt="author..."
               />{" "}
             </div>

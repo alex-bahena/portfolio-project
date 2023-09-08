@@ -42,7 +42,7 @@ const Footer = () => {
             <HashLink className="back-header" smooth={true} to="#header">
               <img
                 className="footer-logo-img"
-                src={"/assets/abslogofooter.png"}
+                src={"assets/abslogofooter.png"}
                 alt="logo..."
               />
             </HashLink>

@@ -48,9 +48,7 @@ const ReposManagement = ({ limit }) => {
                 <>
                   <img
                     src={
-                      "/assets/projects-img-preview/" +
-                      projectList.name +
-                      ".jpg"
+                      "assets/projects-img-preview/" + projectList.name + ".jpg"
                     }
                     alt=" project"
                     className="card-img-top"

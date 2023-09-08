@@ -1,11 +1,11 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import { Routes, Route, HashRouter, Navigate } from "react-router-dom";
 import ContactForm from "../components/contact-component/ContactForm";
 import Main from "../components/Main";
 
 const Routing = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/*Main content */}
       <section className="content">
         <Routes>
@@ -26,7 +26,7 @@ const Routing = () => {
       </section>
 
       {/* Footer */}
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

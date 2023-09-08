@@ -29,7 +29,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
         {GithubRepoID && (
           <>
             <img
-              src={"/assets/projects-img/" + GithubRepoID.name + ".jpg"}
+              src={"assets/projects-img/" + GithubRepoID.name + ".jpg"}
               alt="popup-img "
               className="popup-img"
             />
