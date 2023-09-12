@@ -13,11 +13,11 @@ const Experience = () => {
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>Languages I speak</h3>
-            <p>
+            <h2>Languages I speak</h2>
+            {/* <p>
               Always willing to participate in the design and creation of
               scalable software
-            </p>
+            </p> */}
             <ul>
               <li key="html" id="html" className="mb-2">
                 HTML{" "}
@@ -63,12 +63,11 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>Frontend</h3>
-
-            <p>
+            <h2>Frontend</h2>
+            {/* <p>
               I like to translate ideas into functional and interactive
               applications.
-            </p>
+            </p> */}
             <ul>
               <li key="react" id="react" className="mb-2">
                 React{" "}
@@ -113,8 +112,8 @@ const Experience = () => {
         <div className="timeline-block timeline-block-left">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>Backend</h3>
-            <p>Tools I use to develope and work behind the scenes</p>
+            <h2>Backend</h2>
+            {/* <p>Tools I use to develope and work behind the scenes</p> */}
             <ul>
               <li key="node" id="node" className="mb-2">
                 Node.js{" "}
@@ -126,7 +125,7 @@ const Experience = () => {
                 />
               </li>
               <li key="aws" id="aws" className="mb-2">
-                AWS S3{" "}
+                AWS S2{" "}
                 <Icon
                   icon="skill-icons:aws-light"
                   style={{
@@ -210,8 +209,8 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>Others</h3>
-            <p>Active learning is always important!</p>
+            <h2>Others</h2>
+            {/* <p>Active learning is always important!</p> */}
             <ul>
               <li key="git" id="git" className="mb-2">
                 Git{" "}

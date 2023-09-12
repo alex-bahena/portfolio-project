@@ -62,16 +62,14 @@ const ReposManagement = ({ limit }) => {
                               projectList.name.replace(/[_-]/g, " ")
                             : projectList.name}
                         </h5>
-                        <br></br>
                         <p className="portfolio-description">
                           Built with:{" "}
                           {projectList.topics
                             ? //Capitalized the first letter of the name of each tecnology applied on every project obtained from the Github API
                               projectList.topics
                                 .map(capitalizedFirstLetter)
-                                .join(", ")
+                                .join(", ") + "."
                             : projectList.topics}
-                          <br></br>
                           <button
                             className="read-more"
                             onClick={(e) => handleClick(true, e)}

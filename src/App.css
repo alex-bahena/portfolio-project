@@ -62,7 +62,7 @@ nav {
 }
 
 .logo {
-  width: 21.25rem !important;
+  width: 20.25rem !important;
 }
 
 /* _____________________MENU LINKS____________________ */
@@ -120,6 +120,15 @@ nav {
 @media (max-width: 768px) {
   .navbar-brand {
     width: 7rem;
+  }
+
+  .logo {
+    margin-top: 0.2rem;
+    position: absolute;
+    top: 0;
+    width: 30% !important;
+    height: 5.5119rem;
+    object-fit: cover;
   }
 
   .nav-experience {
@@ -433,6 +442,10 @@ div .see-morebtn:hover {
   transition: all 1s;
 }
 
+.card-title {
+  margin-bottom: 1rem !important;
+}
+
 .card-title,
 .portfolio-description {
   color: #fff;
@@ -449,6 +462,7 @@ div .see-morebtn:hover {
   background-color: transparent;
   border: none;
   padding: 0;
+  margin-left: 0.1875rem;
 }
 
 .portfolio-content .read-more:hover {
@@ -465,9 +479,34 @@ div .see-morebtn:hover {
 
 @media (hover: none) {
   /* target only devices that can´t hover */
-  /* .portfolio-card .portfolio-content {
-    left: 0;
-  } */
+  .portfolio-card .card-img-top {
+    box-shadow: none;
+  }
+  .portfolio-card .portfolio-content {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+    border-radius: 0 0 0.9375rem 0.9375rem;
+    padding: 0.25rem;
+    left: 0.5188rem;
+    right: 0;
+    bottom: 0.5rem;
+    top: 6.625rem;
+    width: 95%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: medium;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .portfolio-description {
+    font-size: small;
+  }
+
+  .read-more {
+    font-size: small;
+  }
 }
 
 /* _____________________POPUP BOX____________________ */
@@ -697,16 +736,9 @@ div .see-morebtn:hover {
 
 .experience-wrapper {
   position: relative;
-  padding: 3.125rem 0;
+  padding: 1.125rem 0;
   overflow: hidden;
 }
-
-.experience h1 {
-  font-family: var(--primary-font);
-  font-weight: 800;
-  color: var(--primary-green);
-}
-
 .experience-wrapper::before {
   position: absolute;
   content: "";
@@ -718,6 +750,12 @@ div .see-morebtn:hover {
   background: var(--primary-grey);
   z-index: 1;
   overflow: hidden;
+}
+
+.experience h1 {
+  font-family: var(--primary-font);
+  font-weight: 800;
+  color: var(--primary-green);
 }
 
 .timeline-block {
@@ -759,7 +797,7 @@ div .see-morebtn:hover {
   font-size: 1.4rem;
 }
 
-.timeline-content h3 {
+.timeline-content h2 {
   margin-top: 0.3125rem;
   color: var(--primary-green);
   font-family: var(--primary-font);
@@ -784,6 +822,11 @@ div .see-morebtn:hover {
   .experience .container {
     padding-left: 0;
   }
+
+  .experience-wrapper {
+    padding: 0;
+  }
+
   .experience-wrapper::before {
     left: 0.5rem;
     margin-bottom: 1.875rem;
@@ -1061,6 +1104,10 @@ div .footer-logo {
 @media (max-width: 1180px) {
   .intro-footer {
     flex-direction: column;
+  }
+
+  .back-header img {
+    width: 50%;
   }
 
   .lets-connect {
