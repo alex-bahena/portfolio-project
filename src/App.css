@@ -469,6 +469,8 @@ div .see-morebtn:hover {
   font-weight: 800;
 }
 
+/* _____________________HOVER OVERFLOW FUNCTIONALLITY____________________ */
+
 @media (hover: hover) {
   /* target only devices that can hover */
   .portfolio-card:hover .portfolio-content,
@@ -477,35 +479,46 @@ div .see-morebtn:hover {
   }
 }
 
+/* _____________________MOBILE DIVICES OVERFLOW FUNCTIONALLITY____________________ */
+
 @media (hover: none) {
   /* target only devices that can´t hover */
   .portfolio-card .card-img-top {
     box-shadow: none;
   }
-  .portfolio-card .portfolio-content {
+  .portfolio-content {
     background: rgba(0, 0, 0, 0.4);
     border-color: transparent;
     border-radius: 0 0 0.9375rem 0.9375rem;
-    padding: 0.25rem;
-    left: 0.5188rem;
-    right: 0;
-    bottom: 0.5rem;
-    top: 6.625rem;
+    padding: 0.625rem;
     width: 95%;
     height: auto;
+    right: 0;
+    bottom: 0.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
   }
 
   .card-title {
-    font-size: medium;
+    font-size: 1rem;
     margin-bottom: 0.5rem !important;
   }
 
   .portfolio-description {
-    font-size: small;
+    font-size: 0.75rem;
   }
 
   .read-more {
-    font-size: small;
+    font-size: 0.75rem;
+  }
+}
+
+/* _____________________MOBILE DEVICES OVERFLOW QUERY____________________ */
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 50% !important;
   }
 }
 
