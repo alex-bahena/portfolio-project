@@ -43,7 +43,7 @@ const ReposManagement = ({ limit }) => {
         return render_api_data_JSX.push(
           <React.Fragment key={projectList.id}>
             {/* - */}
-            <div className="col-12 col-md-6 col-lg-4 portfolio-card">
+            <div className="col-12 col-md-6 col-lg-6 portfolio-card">
               {projectList ? (
                 <>
                   <img

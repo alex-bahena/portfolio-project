@@ -24,14 +24,14 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="intro-footer text-center col-lg-10 col-md-12 justify-content-center">
-            <h2 className="lets-connect flex-lg-fill">Let's talk</h2>
+            <h2 className="lets-connect flex-lg-fill">Hey, there!</h2>
             <p className="chat-invite flex-lg-fill">
               Interested in working together? We should queue up <br /> a time
               to chat.
             </p>
             <Link to="/contact">
               <button type="button" className="footer-contact-btn flex-lg-fill">
-                Let's do it!
+                Let's chat!
               </button>
             </Link>
           </div>
@@ -46,8 +46,8 @@ const Footer = () => {
                 alt="logo..."
               />
             </HashLink>
-            <p className="moto">
-              Living, learning, & leveling up
+            <p className="motto">
+              Learning, & boosting up
               <br /> one day at a time.
             </p>
           </div>
@@ -98,7 +98,7 @@ const Footer = () => {
             </p>
           </div>
           <p className="handcrafted text-center">
-            Handcrafted with love{" "}
+            Handcrafted with{" "}
             <span role="img" aria-label="love">
               ❤️
             </span>{" "}
