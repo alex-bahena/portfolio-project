@@ -36,6 +36,26 @@ const ReposManagement = ({ limit }) => {
   const render_api_data_JSX = [];
   const limitData = limit.map((element) => element.id);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+      console.log(`Width: ${windowWidth}`);
+    };
+  });
+
+  const isMobile =
+    windowWidth < 1200
+      ? "col-12 col-md-6 col-lg-6 portfolio-card"
+      : "col-12 col-md-6 col-lg-4 portfolio-card";
+
   limitData.forEach((element) => {
     gitData
       .filter((projects) => projects.id === element)
@@ -43,7 +63,7 @@ const ReposManagement = ({ limit }) => {
         return render_api_data_JSX.push(
           <React.Fragment key={projectList.id}>
             {/* - */}
-            <div className="col-12 col-md-6 col-lg-6 portfolio-card">
+            <div className={isMobile}>
               {projectList ? (
                 <>
                   <img
