@@ -76,10 +76,6 @@ nav {
   cursor: pointer;
 }
 
-/* nav ul li {
-  text-transform: uppercase;
-} */
-
 .navbar-nav > li > a {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
@@ -147,7 +143,7 @@ nav {
   background: url(../public/assets/background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  height: 85vh;
+  height: 55vh;
   overflow: hidden;
 }
 
@@ -250,8 +246,8 @@ nav {
 }
 
 .aboutme-img {
-  width: 10rem;
-  margin-top: 2.5rem;
+  width: 17rem;
+  margin-top: 0.5rem;
   margin-left: 4rem;
 }
 
@@ -281,8 +277,7 @@ nav {
     padding: 0rem;
   }
   .aboutme-img {
-    width: 5rem;
-    transform: rotate(90deg);
+    width: 15rem;
     margin-left: 0;
   }
   .about-me h1 {

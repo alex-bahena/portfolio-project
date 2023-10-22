@@ -125,7 +125,7 @@ const Experience = () => {
                 />
               </li>
               <li key="aws" id="aws" className="mb-2">
-                AWS S2{" "}
+                AWS S3{" "}
                 <Icon
                   icon="skill-icons:aws-light"
                   style={{
