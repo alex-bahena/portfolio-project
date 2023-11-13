@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="social-field d-flex flex-row justify-content-center">
             <p className="github">
               <a
-                href="https://github.com/AlejandroBahSan"
+                href="https://github.com/alex-bahena"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="github-link"
@@ -68,7 +68,7 @@ const Footer = () => {
             <p className="linkedIn social-link">
               {" "}
               <a
-                href="https://www.linkedin.com/in/alejandrobahena/"
+                href="https://www.linkedin.com/in/alex-bahena/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="linkedIn-link"
@@ -79,7 +79,7 @@ const Footer = () => {
             <p className="twitter social-link ">
               {" "}
               <a
-                href="https://www.linkedin.com/in/alejandrobahena/"
+                href="https://twitter.com/AlejandroBahSan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="twitter-link"
@@ -90,7 +90,7 @@ const Footer = () => {
             <p className="gmail social-link ">
               {" "}
               <a
-                href="mailto:alejandro.bahsan.dev@gmail.com"
+                href="mailto:alex.bahena.ca@gmail.com"
                 className="gmail-link"
               >
                 <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
@@ -103,7 +103,7 @@ const Footer = () => {
               ❤️
             </span>{" "}
             by <br />
-            <span className="my-name">Alejandro Bahena</span>
+            <span className="my-name">Alex Bahena</span>
           </p>
 
           <table className="made-with">
