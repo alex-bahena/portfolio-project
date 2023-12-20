@@ -20,10 +20,10 @@ const Particle = () => {
       options={{
         particles: {
           color: {
-            value: "3C3C3C",
+            value: "#ae832d",
           },
           links: {
-            color: "#ffffff",
+            color: "#666666",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -39,15 +39,15 @@ const Particle = () => {
               default: "bounce",
             },
             random: false,
-            speed: 3,
+            speed: 2,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 900,
+              area: 300,
             },
-            value: 30,
+            value: 15,
           },
           opacity: {
             value: 0.5,
@@ -59,14 +59,14 @@ const Particle = () => {
             },
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
           responsive: [
             {
               maxWidth: 500,
               options: {
                 particles: {
-                  number: { limit: 50 },
+                  number: { limit: 30 },
                 },
               },
             },

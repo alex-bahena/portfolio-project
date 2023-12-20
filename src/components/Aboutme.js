@@ -1,4 +1,5 @@
 import React from "react";
+import "./Aboutme.css";
 
 const Aboutme = () => {
   return (
@@ -9,13 +10,13 @@ const Aboutme = () => {
             <div className="image-wrap">
               <img
                 className="aboutme-img"
-                src={"assets/aboutme.png"}
+                src={"assets/new-ilustrations/Portfolio Avatar.svg"}
                 alt="author..."
               />{" "}
             </div>
           </div>
           <div className="about-me col-lg-6 col-xm-12">
-            <h1 className="about-heading">Hi, Alex here! Nice to meet you.</h1>
+            <h1 className="about-heading">Hi,there! Nice to meet you.</h1>
             <p className="aboutme-description">
               With over{" "}
               <span className="engineering-experience">

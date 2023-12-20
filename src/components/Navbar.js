@@ -1,3 +1,4 @@
+import "./Navbar.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -35,7 +36,11 @@ const Navbar = () => {
     <nav className="nav-main navbar-custom navbar navbar-expand-lg" id="header">
       <div className="header container">
         <Link className="navbar-brand" to="/main">
-          <img className="logo" src={"assets/abslogo.png"} alt="logo..." />
+          <img
+            className="logo"
+            src={"assets/new-ilustrations/b.png"}
+            alt="logo..."
+          />
         </Link>
         <button
           className="navbar-toggler"
@@ -76,7 +81,11 @@ const Navbar = () => {
     <nav className="nav-main navbar-custom navbar navbar-expand-lg">
       <div className="header container">
         <Link className="navbar-brand" to="/main">
-          <img className="logo" src={"assets/abslogo.png"} alt="logo..." />
+          <img
+            className="logo"
+            src={"assets/new-ilustrations/b.png"}
+            alt="logo..."
+          />
         </Link>
         <button
           className="navbar-toggler"

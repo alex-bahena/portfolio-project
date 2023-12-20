@@ -1,26 +1,28 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import Typed from "react-typed";
 
 const Experience = () => {
   return (
     <div className="experience border-top">
       <div className="d-flex justify-content-center my-5">
         {/* icons - https://iconify.design/ */}
-        <h1>Experience</h1>
+        <Typed
+          className="typed-text"
+          strings={["Dev Tools"]}
+          typeSpeed={70}
+          loop={false}
+        />
       </div>
 
       <div className="container experience-wrapper">
-        <div className="timeline-block timeline-block-left">
+        <div className="timeline-block knowledge">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h2>Languages I speak</h2>
-            {/* <p>
-              Always willing to participate in the design and creation of
-              scalable software
-            </p> */}
+            <h3 className="dev-tools-skills-title">Languages</h3>
             <ul>
               <li key="html" id="html" className="mb-2">
-                HTML{" "}
+                HTML
                 <Icon
                   icon="vscode-icons:file-type-html"
                   style={{
@@ -60,10 +62,10 @@ const Experience = () => {
         </div>
         {/* - */}
 
-        <div className="timeline-block timeline-block-right">
+        <div className="timeline-block knowledge">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h2>Frontend</h2>
+            <h3 className="dev-tools-skills-title">Frontend</h3>
             {/* <p>
               I like to translate ideas into functional and interactive
               applications.
@@ -109,10 +111,10 @@ const Experience = () => {
           </div>
         </div>
         {/* - */}
-        <div className="timeline-block timeline-block-left">
+        <div className="timeline-block knowledge">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h2>Backend</h2>
+            <h3 className="dev-tools-skills-title">Backend</h3>
             {/* <p>Tools I use to develope and work behind the scenes</p> */}
             <ul>
               <li key="node" id="node" className="mb-2">
@@ -206,10 +208,10 @@ const Experience = () => {
           </div>
         </div>
         {/* - */}
-        <div className="timeline-block timeline-block-right">
+        <div className="timeline-block knowledge">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h2>Others</h2>
+            <h3 className="dev-tools-skills-title">Others</h3>
             {/* <p>Active learning is always important!</p> */}
             <ul>
               <li key="git" id="git" className="mb-2">

@@ -6,29 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const textLine = [`Fullstack Developer`, `Alex Bahena`];
   return (
     <div className="header-wrapper">
       <div className="main-info">
         {" "}
-        <h1>Fullstack Developer</h1>
         <Typed
           className="typed-text"
-          strings={[
-            "HTML",
-            "CSS",
-            "Sass",
-            "React.js",
-            "Bootstrap",
-            "Handlebars.js",
-            "JavaScript",
-            "MySQL",
-            "MongoDB",
-            "Node.js",
-            "Express.js",
-          ]}
-          typeSpeed={40}
-          backSpeed={60}
-          loop
+          strings={textLine}
+          typeSpeed={70}
+          backSpeed={50}
+          loop={false}
         />
         <div className="learnmore">
           <p className="learnmoretext">Learn more about what I do</p>

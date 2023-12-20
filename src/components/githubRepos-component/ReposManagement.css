@@ -1,0 +1,65 @@
+/* ReposManagement.css */
+.projects-container {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: transparent;
+  font-family: var(--font-jetbrains);
+}
+
+.row {
+  margin: 0 -0.9375rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-0.625rem);
+}
+
+.card-title {
+  font-family: var(--font-jetbrains);
+}
+
+#discover-more {
+  border: solid var(--primary-dark);
+  color: var(--primary-dark);
+  font-family: var(--font-jetbrains);
+  font-size: 1rem;
+}
+
+#discover-more:hover {
+  background-color: var(--primary-dark);
+  color: var(--primary-white);
+}
+
+.card-img-top {
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: hsl(0deg, 0%, calc(94% - var(--abs-offset) * 50%));
+  padding: 1rem;
+}
+
+.card-title {
+  color: var(--primary-dark);
+}
+
+.card-body {
+  height: 12.5rem;
+  padding: 1.25rem;
+  background-color: hsl(0deg, 0%, calc(94% - var(--abs-offset) * 50%));
+}
