@@ -53,8 +53,8 @@ div .see-more-wrapper {
 div .see-morebtn {
   font-family: var(--font-jetbrains);
   font-size: 1.5rem;
-  border: 0.1875rem solid var(--primary-white);
-  color: var(--primary-white);
+  border: 0.1875rem solid var(--primary-golden);
+  color: var(--primary-golden);
   background-color: transparent;
   border-radius: 1.5625rem;
   padding: 0.5rem 2rem;
@@ -67,15 +67,21 @@ a .github-icon {
 }
 
 div .see-morebtn:hover {
-  border: 0.1875rem solid var(--primary-white);
+  border: 0.1875rem solid var(--primary-golden);
   color: var(--primary-dark);
-  background-color: var(--primary-white);
+  background-color: var(--primary-golden);
 }
 
 /* _____________________PORTFOLIO MEDIA QUERY____________________ */
 @media (max-width: 768px) {
-  .see-morebtn a {
-    display: flex;
-    flex: 1 1 auto;
+  .typed-text-projects {
+    font-size: 1.5rem;
+    color: var(--primary-white);
+    font-family: var(--font-jetbrains-bold);
+    font-weight: 400;
+  }
+
+  div .see-morebtn {
+    font-size: 1rem;
   }
 }

@@ -4,10 +4,10 @@ import "./Carousel.css";
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
-import {
-  TiChevronLeftOutline,
-  TiChevronRightOutline,
-} from "https://cdn.skypack.dev/react-icons/ti";
+// import {
+//   TiChevronLeftOutline,
+//   TiChevronRightOutline,
+// } from "https://cdn.skypack.dev/react-icons/ti";
 
 const CARDS = 10;
 const MAX_VISIBILITY = 3;
@@ -27,8 +27,8 @@ const Carousel = ({ children }) => {
     <div className="carousel">
       {active > 0 && (
         <button className="nav left" onClick={() => setActive((i) => i - 1)}>
-          <TiChevronLeftOutline />
-          {/* <Icon icon="bxs:left-arrow" /> */}
+          {/* <TiChevronLeftOutline /> */}
+          <Icon icon="bxs:left-arrow" />
         </button>
       )}
       {React.Children.map(children, (child, i) => (
@@ -49,8 +49,8 @@ const Carousel = ({ children }) => {
       ))}
       {active < count - 1 && (
         <button className="nav right" onClick={() => setActive((i) => i + 1)}>
-          {/* <Icon icon="bxs:right-arrow" /> */}
-          <TiChevronRightOutline />
+          <Icon icon="bxs:right-arrow" />
+          {/* <TiChevronRightOutline /> */}
         </button>
       )}
     </div>

@@ -4,19 +4,27 @@ import ReposManagement from "./githubRepos-component/ReposManagement";
 import Typed from "react-typed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useInView } from "react-intersection-observer";
 
 const Portfolio = () => {
+  const { ref, inView } = useInView({
+    /* Optinal adjustments */
+    threshold: 0,
+    delay: 0,
+  });
   return (
-    <div className="portfolio-wrapper border-top">
+    <div ref={ref} className="portfolio-wrapper border-top">
       <div className="container overflow-hidden ">
         <div className="text-center py-5">
-          <Typed
-            className="typed-text-projects"
-            id="recent-projects"
-            strings={["Explore my latest creations"]}
-            typeSpeed={70}
-            loop={false}
-          />
+          {inView && (
+            <Typed
+              className="typed-text-projects"
+              id="recent-projects"
+              strings={["Explore my latest creations"]}
+              typeSpeed={70}
+              loop={false}
+            />
+          )}
         </div>
         <div className="row g-3 m-2">
           {/* - */}
@@ -25,7 +33,6 @@ const Portfolio = () => {
               { id: 521792436 },
               { id: 513358450 },
               { id: 492967623 },
-              { id: 519930549 },
               { id: 519010772 },
               { id: 511682423 },
               { id: 502769004 },

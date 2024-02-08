@@ -32,6 +32,11 @@
   transform: translateY(-0.625rem);
 }
 
+.card-img-top {
+  border-radius: 0.625rem 0.625rem 0 0;
+  background-color: hsl(0deg, 0%, calc(94% - var(--abs-offset) * 50%));
+  padding: 1rem;
+}
 .card-title {
   font-family: var(--font-jetbrains);
 }
@@ -48,12 +53,6 @@
   color: var(--primary-white);
 }
 
-.card-img-top {
-  border-radius: 0.625rem 0.625rem 0 0;
-  background-color: hsl(0deg, 0%, calc(94% - var(--abs-offset) * 50%));
-  padding: 1rem;
-}
-
 .card-title {
   color: var(--primary-dark);
 }
@@ -62,4 +61,20 @@
   height: 12.5rem;
   padding: 1.25rem;
   background-color: hsl(0deg, 0%, calc(94% - var(--abs-offset) * 50%));
+}
+
+/*------------ MEDIA QUERY ------------------*/
+@media (max-width: 48rem) {
+  .card {
+    width: 65%;
+    height: 65%;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  #discover-more {
+    font-size: 0.7rem;
+  }
 }

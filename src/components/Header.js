@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.css";
 import Typed from "react-typed";
 import { HashLink } from "react-router-hash-link";
 

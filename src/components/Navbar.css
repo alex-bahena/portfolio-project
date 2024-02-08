@@ -13,7 +13,7 @@ nav {
 
 /* _____________________MENU LINKS____________________ */
 .navbar-custom {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .nav-contact {
@@ -60,6 +60,10 @@ nav {
   height: 6rem !important;
 }
 
+.navbar-toggler {
+  background-color: var(--primary-golden);
+}
+
 /* _____________________MEDIA QUERY MENU LINKS____________________ */
 
 @media (max-width: 768px) {
@@ -70,7 +74,7 @@ nav {
   .logo {
     margin-top: 0.2rem;
     position: absolute;
-    top: 0;
+    top: 0.375rem;
     width: 5.5119rem !important;
     height: auto;
     object-fit: cover;
