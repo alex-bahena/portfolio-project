@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Popupbox.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faWindowMaximize, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -38,7 +39,7 @@ const Popupbox = ({ trigger, setTrigger, gitData, idClicked }) => {
             </h1>
             <p className="popup-repoDescription">{GithubRepoID.description}</p>
             <p className="popup-repoBuiltWith">
-              {"Built with: " +
+              {"Crafted with: " +
                 //Capitalized the first letter of each tecnologies applied in every project we get from the Github API
                 GithubRepoID.topics.map(capitalizedFirstLetter).join(", ")}
             </p>

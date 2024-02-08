@@ -42,7 +42,7 @@ const Footer = () => {
             <HashLink className="back-header" smooth={true} to="#header">
               <img
                 className="footer-logo-img"
-                src={"assets/abslogofooter.png"}
+                src={"assets/new-ilustrations/b.png"}
                 alt="logo..."
               />
             </HashLink>
@@ -89,10 +89,7 @@ const Footer = () => {
             </p>
             <p className="gmail social-link ">
               {" "}
-              <a
-                href="mailto:alex.bahena.ca@gmail.com"
-                className="gmail-link"
-              >
+              <a href="mailto:alex.bahena.ca@gmail.com" className="gmail-link">
                 <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
               </a>
             </p>

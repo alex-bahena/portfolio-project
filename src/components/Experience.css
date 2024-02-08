@@ -1,0 +1,147 @@
+/* _____________________EXPERIENCE____________________ */
+
+.experience {
+  position: relative;
+  padding: 0.7rem;
+  z-index: 1;
+  background-color: var(--primary-dark);
+}
+
+/* NEW */
+.experience-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.typed-exp {
+  color: var(--primary-white) !important;
+}
+
+.knowledge {
+  max-width: 250px;
+  padding: 0.1rem;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    var(--primary-dark),
+    var(--primary-golden)
+  );
+  font-family: var(--font-jetbrains);
+}
+
+.marker {
+  background: #222;
+  color: white;
+  padding: 2rem;
+  height: 100%;
+}
+
+.knowledge ul {
+  padding-left: 0rem;
+}
+
+.knowledge li {
+  color: var(--primary-white);
+}
+
+.knowledge h3 {
+  color: var(--primary-white);
+  color: var(--primary-golden);
+}
+
+.dev-tools-skills-title {
+  font-family: var(--font-jetbrains-bold);
+}
+
+.database-orms {
+  font-family: var(--font-jetbrains);
+  color: var(--primary-golden);
+}
+.experience-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  background: var(--primary-white);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.experience h1 {
+  font-family: var(--font-jetbrains);
+  font-weight: 800;
+  color: var(--primary-white);
+}
+
+.experience-wrapper {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing between columns */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.knowledge {
+  flex: 1; /* Each block takes equal space */
+  margin: 10px; /* Adjust margin as needed */
+  max-width: 300px; /* Optional, for controlling maximum width */
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  align-items: center; /* Horizontally centers content */
+  text-align: center; /* Centers text alignment */
+}
+
+/* Additional styling for list items and icons */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-tools {
+  font-size: 1.2rem;
+}
+
+/* Icon styling - adjust as necessary */
+.icon {
+  margin-right: 5px; /* Adds spacing between icon and text */
+}
+
+/* Responsive design - Adjust breakpoint as necessary */
+@media (max-width: 768px) {
+  .experience-wrapper {
+    flex-direction: column;
+  }
+
+  .knowledge {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* _____________________ MEDIA QUERY EXPERIENCE____________________ */
+
+@media (max-width: 768px) {
+  /* .experience .container {
+    padding-left: 0;
+  }
+
+  .experience-wrapper {
+    padding: 0;
+  } */
+
+  .experience-wrapper::before {
+    left: 0.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .knowledge-right {
+    float: none;
+    width: 100%;
+  }
+  .knowledge-left {
+    float: none;
+    direction: ltr;
+    width: 100%;
+  }
+}

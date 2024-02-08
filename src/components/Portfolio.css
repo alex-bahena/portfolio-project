@@ -1,0 +1,87 @@
+/* _____________________PORTFOLIO____________________ */
+
+.portfolio-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: var(--primary-dark);
+  overflow: hidden;
+}
+
+/* .custom-typed {
+  align-items: center;
+  text-align: center;
+} */
+
+.typed-text-projects {
+  font-size: 2.5rem;
+  color: var(--primary-white);
+  font-family: var(--font-jetbrains-bold);
+  font-weight: 400;
+}
+
+.portfolio-card {
+  height: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card .card-img-top {
+  border: 0.0625rem solid var(--primary-light-grey);
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #141c3a;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.portfolio-heading {
+  color: var(--primary-dark);
+  font-family: var(--font-jetbrains);
+}
+
+div .see-more-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+div .see-morebtn {
+  font-family: var(--font-jetbrains);
+  font-size: 1.5rem;
+  border: 0.1875rem solid var(--primary-golden);
+  color: var(--primary-golden);
+  background-color: transparent;
+  border-radius: 1.5625rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+a .github-icon {
+  margin-right: 10px;
+}
+
+div .see-morebtn:hover {
+  border: 0.1875rem solid var(--primary-golden);
+  color: var(--primary-dark);
+  background-color: var(--primary-golden);
+}
+
+/* _____________________PORTFOLIO MEDIA QUERY____________________ */
+@media (max-width: 768px) {
+  .typed-text-projects {
+    font-size: 1.5rem;
+    color: var(--primary-white);
+    font-family: var(--font-jetbrains-bold);
+    font-weight: 400;
+  }
+
+  div .see-morebtn {
+    font-size: 1rem;
+  }
+}
