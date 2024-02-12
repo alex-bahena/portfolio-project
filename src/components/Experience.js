@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experience.css";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import { useInView } from "react-intersection-observer";
 const Experience = () => {
   const { ref, inView } = useInView({
@@ -11,14 +11,20 @@ const Experience = () => {
   return (
     <div ref={ref} className="experience">
       <div className="d-flex justify-content-center my-5">
-        {inView && (
+        {/* {inView && (
           <Typed
             className="typed-text typed-exp"
-            strings={["Dev Tools"]}
+            strings={[]}
             typeSpeed={70}
             loop={false}
           />
-        )}
+        )} */}
+        <ReactTyped
+          className="typed-text typed-exp"
+          startWhenVisible
+          strings={["Dev Tools"]}
+          typeSpeed={70}
+        />
       </div>
 
       <div className="container experience-wrapper">

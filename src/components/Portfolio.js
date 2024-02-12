@@ -1,7 +1,7 @@
 import "./Portfolio.css";
 import React from "react";
 import ReposManagement from "./githubRepos-component/ReposManagement";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useInView } from "react-intersection-observer";
@@ -16,15 +16,14 @@ const Portfolio = () => {
     <div ref={ref} className="portfolio-wrapper border-top">
       <div className="container overflow-hidden ">
         <div className="text-center py-5">
-          {inView && (
-            <Typed
-              className="typed-text-projects"
-              id="recent-projects"
-              strings={["Explore my latest creations"]}
-              typeSpeed={70}
-              loop={false}
-            />
-          )}
+          <ReactTyped
+            className="typed-text-projects"
+            id="recent-projects"
+            startWhenVisible
+            strings={["Explore my latest creations"]}
+            typeSpeed={70}
+            loop={false}
+          />
         </div>
         <div className="row g-3 m-2">
           {/* - */}

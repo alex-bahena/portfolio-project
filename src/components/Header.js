@@ -1,22 +1,21 @@
 import React from "react";
 import "./Header.css";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import { HashLink } from "react-router-hash-link";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const textLine = [`Fullstack Developer`, `Alex Bahena`];
+  const textLine = ["Fullstack Developer", "Alex Bahena"];
   return (
     <div className="header-wrapper">
       <div className="main-info">
         {" "}
-        <Typed
+        <ReactTyped
           className="typed-text"
           strings={textLine}
-          typeSpeed={70}
-          backSpeed={50}
+          typeSpeed={100}
+          backSpeed={70}
           loop={false}
         />
         <div className="learnmore">
