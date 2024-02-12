@@ -1,5 +1,3 @@
-// import React, {useState} from 'https://cdn.skypack.dev/react';
-// import ReactDOM from 'https://cdn.skypack.dev/react-dom';
 import "./Carousel.css";
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
@@ -9,15 +7,7 @@ import { Icon } from "@iconify/react";
 //   TiChevronRightOutline,
 // } from "https://cdn.skypack.dev/react-icons/ti";
 
-const CARDS = 10;
 const MAX_VISIBILITY = 3;
-
-const Card = ({ title, content }) => (
-  <div className="card">
-    <h2>{title}</h2>
-    <p>{content}</p>
-  </div>
-);
 
 const Carousel = ({ children }) => {
   const [active, setActive] = useState(2);
@@ -58,15 +48,3 @@ const Carousel = ({ children }) => {
 };
 
 export default Carousel;
-// const Repo = () => (
-//   <div className="app">
-//     <Carousel>
-//       {[...new Array(CARDS)].map((_, i) => (
-//         <Card
-//           title={"Card " + (i + 1)}
-//           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-//         />
-//       ))}
-//     </Carousel>
-//   </div>
-// );
